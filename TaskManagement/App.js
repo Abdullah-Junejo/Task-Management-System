@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import LoginScreen from './src/screens/LoginScreen'
+import AccountLogin from './src/screens/AccountLoginScreen';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,7 @@ function MainStack() {
   return (
     <Stack.Navigator initialRouteName={"Login"} screenOptions={ {headerShown: false} }>
       <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="AccountLogin" component={AccountLogin} />
     </Stack.Navigator>
   )
 }
