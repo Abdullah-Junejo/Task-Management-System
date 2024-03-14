@@ -8,14 +8,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import LoginScreen from './src/screens/LoginScreen'
 import AccountLogin from './src/screens/AccountLoginScreen';
+import HomeScreen from './src/screens/HomeScreen'
 
 const Stack = createStackNavigator();
 
 function MainStack() {
   return (
-    <Stack.Navigator initialRouteName={"Login"} screenOptions={ {headerShown: false} }>
+    <Stack.Navigator initialRouteName={"HomeScreen"} screenOptions={ {headerShown: false} }>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="AccountLogin" component={AccountLogin} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
     </Stack.Navigator>
   )
 }
